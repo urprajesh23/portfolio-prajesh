@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Top 5 Long-Term Potential Stocks</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Potential</th>
+            <th>Current Price</th>
+            <th>ROE %</th>
+            <th>P/E</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock['Name'] }}</td>
+            <td>{{ stock['Long_Term_Potential'] }}</td>
+            <td>{{ stock['CMP Rs.'] }}</td>
+            <td>{{ stock['ROE %'] }}</td>
+            <td>{{ stock['P/E'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
